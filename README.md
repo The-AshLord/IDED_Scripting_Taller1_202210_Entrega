@@ -13,3 +13,6 @@ Espero poder solucionar el chicarrón que s eme armó este fin de semana lo más
 ![image](https://user-images.githubusercontent.com/83988504/154893276-415491f4-5a37-4552-8c11-42654d9d229c.png)
 ![image](https://user-images.githubusercontent.com/83988504/154893427-3ea4bd1d-1ecc-4122-8e8f-251e992def64.png)
 ![image](https://user-images.githubusercontent.com/83988504/154893447-53fece48-152d-4af7-958f-0e709f0c14b1.png)
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/83988504/154894537-751b281b-caed-4413-8804-e8b4c2cbc914.png">
+<img width="924" alt="image" src="https://user-images.githubusercontent.com/83988504/154894914-f7228c56-7e42-4ad9-a1cc-156a82585b54.png">
+
