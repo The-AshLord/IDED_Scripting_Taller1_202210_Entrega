@@ -15,8 +15,61 @@ namespace TestProject1
 
         internal static Stack<int> GetNextGreaterValue(Stack<int> sourceStack)
         {
-            Stack<int> result = null;
+            //para evitarnos problemas, vamos a hacer un back up de la Pila Fuente:
+            int[] trasnferSourceToArray = sourceStack.ToArray(); //Trasferimos a un arreglo todo el contenido de sourceStack
 
+            //Creamos las estructuras que vamos a utilizar
+            Stack<int> calkStack = new Stack<int>(); //Crea la pila en la que vamos a calcar a sourceStack
+            Stack<int> auxStack = new Stack<int>(); //Crea la pila Auxiliar
+            Stack<int> result = new Stack<int>(); //Crea la pila para los resultados
+            List<int> dataList = new List<int>(); //Crea una lista para ordenar los resultados 
+
+            //Llenamos la Pila calkStack con el contenido del Aregglo de Trasferencia
+            for (int i =trasnferSourceToArray.Length -1, i >= 0; i--)
+            {
+                calkStack.Push(trasnferSourceToArray[i]); 
+            }
+
+            //Mientras en calkStack haya elemntos: 
+            while(calkStack()! = null) {
+
+                int dato = calkStack.pop();
+                int biggestData = dato; 
+                dataList.Add(dato);
+
+                //Recorro dataList
+                for (int i = 0;i <dataList.Count; i++)
+                {
+                    //Reviso si hay el valor de biggestData es menor que el de cada elemento de dataList
+                    if(biggestData < dataList[i])
+                    {
+                        //Si algun Valor es mayor, lo actualizo
+                        biggestData = dataList[i];
+                    }
+                }
+            
+                //Como ya tengo actualizado el valor de biggestData, puedo empezar a llenar auxStuck
+                //Si mi dato actual es menor que biggestData...
+                if (dato < biggestData)
+                {
+                    //Agrego el valor mayor posterior anterior (biggestData) a auxStuck 
+                    auxStack.Push(biggestData);
+                }
+                else 
+                {
+                    //De lo contraio, agrego un -1 a biggestData
+                    auxStack.Push(-1)    
+                }            
+            }
+        
+            //Ya solo queda vaciar auxStuck para llenar result
+            while (auxStack != null)
+            {
+                    result.Push(auxStack.Pop) //lo que saco de auxStuck lo meto en result
+                    //De esta manera me aseguro de que los valores en result queden en el orden correcto
+            }
+
+            //devuelvo mi pila con las respuestas papara la posterior verificación
             return result;
         }
 
